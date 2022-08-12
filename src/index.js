@@ -9,9 +9,6 @@ import App02 from './App02/App2'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<h6> index js
-  
-</h6>
     <App02 />
 
 

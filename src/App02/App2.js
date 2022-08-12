@@ -12,7 +12,7 @@ export default function App02(){
 
     return(
     <section>
-        <p>app02</p>
+   
 
     <HashRouter>
         <Routes>

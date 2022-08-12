@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter,Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route, HashRouter } from "react-router-dom";
 import  List from "./pages/List"
 import SharedLayout from './pages/SharedLayout'
 import Insert from './pages/Insert'
@@ -12,8 +12,9 @@ export default function App02(){
 
     return(
     <section>
+        <p>app02</p>
 
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
 
             <Route path="/" element={<SharedLayout />} >
@@ -23,7 +24,7 @@ export default function App02(){
 
             </Route>
         </Routes>    
-    </BrowserRouter>    
+    </HashRouter>    
           
          
     </section>)

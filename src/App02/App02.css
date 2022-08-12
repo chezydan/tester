@@ -1,0 +1,104 @@
+
+article{
+    margin: 50px 20px 100px 20px;
+    background-color: cyan;
+    border-radius:20px;
+}
+
+body{
+    background-color: darkcyan;
+    
+    margin-top:4em;
+}
+
+h1,h2,h3,h4{
+    font-family:  "Lucida Console", "Curier New";
+    text-align: center;
+   color: white
+}
+
+.year{
+    font-family:Apple Chancery, cursive;
+    color: #125522
+}
+
+
+a{
+ display:block;
+
+ padding: 1em;
+    position : relative;
+    text-align: center;
+    color:antiquewhite
+}
+a:hover{color:orange;
+/*margin-top:-10px;}   */
+font-size: 1.2em;
+}
+
+.img-container{
+    align-items:center
+}
+
+img {
+    height: 30rem;
+    display:block;    
+    border-radius:4%;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+h2{
+    color :whitesmoke;
+}
+
+.formy{
+ 
+    width:70%;
+    background-color:#BBFFBB;
+    border-radius:3%;
+    padding: 0.3em 0em 2em 0em;
+    margin-left:auto;
+    margin-right:auto;
+
+
+}
+.--nav{
+    display:flex;
+}
+.card-title{
+    border-radius: 2% ;
+}
+
+.frm{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items:center;
+    border-radius:4%;
+}
+
+
+.frm-inp{
+    margin:0.5em;
+    height:2em;
+    opacity:65%;
+    border-radius:5%;
+    width:77%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.btn{
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#025520;
+    height:2.5em;
+    border-radius:10%;
+    color:wheat;
+    font-weight: bold;
+}

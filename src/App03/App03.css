@@ -3,7 +3,27 @@ body{
 
 }
 
+.formy{
+    display:inline;
+}
+.formy input{
+    height:2rem;
+    min-width:350px;
+    max-width:500px;    
+}
+
+.formy textarea{
+    height:4em;
+    min-width:350px;
+    max-width:500px;    
+}
+
+
 .cart{
     background-color: purple;
-    color:wheat
+    color:wheat;
+    border-radius:3%;
+}
+.cart img{
+    height:12em;
 }

@@ -23,7 +23,17 @@ body{
     background-color: purple;
     color:wheat;
     border-radius:3%;
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+
 }
 .cart img{
     height:12em;
+}
+
+.book-title{
+    background-color: rgb(112, 60, 8);
+    text-align:center ;
+    padding:0.5em;
 }

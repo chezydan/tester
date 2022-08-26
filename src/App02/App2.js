@@ -8,7 +8,7 @@ import "./App02.css"
 import Navbar from './Navbar'
 
 export default function App02(){
-    const [pname, setpName]= React.useState("Archi")
+   // const [pname, setpName]= React.useState("Archi")
 
     return(
     <section>

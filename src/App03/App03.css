@@ -2,34 +2,65 @@ body{
     background-color: rosybrown;
 
 }
-
+.st{
+    top:0;
+    position:sticky;
+  
+    
+}
 .formy{
-    display:inline;
+
+    
+    top:40px;
+    position:sticky; 
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:5px;
+    border: solid 3px brown;
+    padding :1em;
+    border-radius: 3%;
+    background-color: green;
+ 
+ 
+    
 }
 .formy input{
-    height:2rem;
-    min-width:350px;
-    max-width:500px;    
+   height:2em;
 }
 
+.formy input:focus{
+    background-color: yellow;
+}
 .formy textarea{
-    height:4em;
-    min-width:350px;
-    max-width:500px;    
+    grid-column:1/3;
+    grid-row: 2/4;
+    height:4em; 
 }
 
+.formy textarea:focus{
+    background-color: yellow;
+}
+.cart-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(520px , 1fr) );    
+    grid-gap:2em;
+    justify-content: center;
 
+}
 .cart{
     background-color: purple;
     color:wheat;
     border-radius:3%;
-    width:80%;
-    margin-right:auto;
-    margin-left:auto;
+    align-items :center;
+    
 
 }
 .cart img{
     height:12em;
+}
+.cart a {
+    color:yellowgreen;
 }
 
 .book-title{

@@ -99,8 +99,10 @@ function App03() {
 
     }
 
-  return (    <div>
-    <h2>App03 firebase crud on books </h2>
+  return (    <>
+    
+    <div  className="st" >
+    <h2  className='st' >      App03 firebase crud on books </h2></div>
     <div className='formy'>
     
     <input  
@@ -145,12 +147,15 @@ function App03() {
     >{ edit? 'edit book' : 'create book' }</button>
     </div> {/*formy */}
     <h4> {books.length>0 ? `${books.length} books in list`: 'no books' } </h4>
-
+<div className='cart-container'>
+   
     {books.map( (book)=>
     { return(<section className='cart'>
+            
             <h4 className='book-title'> {book.title}</h4>
             <p>{book.author}</p>
             <p>{book.desc}</p>
+            {book.url!=="" &&<a href={book.url} target='blank'       >- - more info - - </a> }
             <img src={book.img} alt={"no img for "+book.title }/>
             <p>{book.temas}</p>
             <p>{book.lang}</p>
@@ -160,13 +165,17 @@ function App03() {
             onClick={ ()=> updateBook(book.id, book)}>
                     edit</button>
 
-</section>
-    )
+         
 
+</section>
+    )  
     }
+     
+    
     )}
 
-    </div>
+</div>  {/*cart container */}
+    </>
   )
 }
 

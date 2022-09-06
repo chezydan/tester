@@ -1,14 +1,7 @@
 import React from 'react'
-import './App03.css'
-
-
-import { HashRouter,Routes,Route,Link } from 'react-router-dom';
+import '../App03.css'
 import {useState, useEffect, useRef} from 'react';
-import {db} from './firebaseConfig'
-
-import TestPage from './pages/TestPage'
-import Books from './pages/Books'
-
+import {db} from '../firebaseConfig'
 import { collection,
     doc,
     getDocs,
@@ -20,7 +13,7 @@ import { collection,
 
     
 
-function App03() {
+function Books() {
     const [currentId, setCurrentId] = useState();
     const [ books, setBooks] = useState([]);
     const booksCollectionRef = collection(db,'booksMed')
@@ -106,29 +99,12 @@ function App03() {
 
     }
 
-
-
-
-
-return (    <div>
-<HashRouter>
-<nav className='mainNav'>
-    <Link to='/testpage'> Test Page</Link>
-    <Link to='/books'> Books</Link>
-    </nav>
-    <Routes>
+  return (    <>
 
    
-    <Route path="/testpage" element={<TestPage/>}  />
-    <Route path="/books" element={<Books/>}  />
-    </Routes>
-    <footer >my footer</footer>
-    </HashRouter>    
-
-
-    {/* 
+    
     <div  className="st" >
-    <h2  className='st' >      App03 firebase crud on books </h2></div>
+    <h2  >      App03 firebase crud on books - books element </h2></div>
     <div className='formy'>
     
     <input  
@@ -171,7 +147,7 @@ return (    <div>
     <button  
         onClick={createBook}
     >{ edit? 'edit book' : 'create book' }</button>
-    </div> 
+    </div> {/*formy */}
     <h4> {books.length>0 ? `${books.length} books in list`: 'no books' } </h4>
 <div className='cart-container'>
    
@@ -200,11 +176,9 @@ return (    <div>
     
     )}
 
-</div>  //*cart container 
-
-{*/}
-    </div>
+</div>  {/*cart container */}
+    </>
   )
 }
 
-export default App03
+export default Books

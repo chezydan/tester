@@ -3,25 +3,37 @@ body{
 
 }
 .st{
-    top:0;
+    top: 18px;;
     position:sticky;
-  
+    color:yellow
     
 }
+
+.mainNav{
+  
+    height:25px;
+    position:sticky;
+    top:0;
+        
+       
+}
+.mainNav a{color:aquamarine}
+
+
 .formy{
 
     
-    top:40px;
+
     position:sticky; 
-    
+    top:40px;    
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap:5px;
     border: solid 3px brown;
     padding :1em;
     border-radius: 3%;
-    background-color: green;
- 
+    background-color: darkmagenta;
+    opacity: 82%;
  
     
 }
@@ -61,6 +73,20 @@ body{
 }
 .cart a {
     color:yellowgreen;
+}
+.cart button{
+    background-color:rgb(92, 33, 92);
+    color:antiquewhite;
+    width:4em;
+    height:3em;
+    align-self: center;
+    border:solid black ;
+    border-radius:10%;
+    margin-right:0.7em;
+    position:relative;
+    left:15px;
+
+
 }
 
 .book-title{

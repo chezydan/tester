@@ -9,6 +9,7 @@ import {db} from './firebaseConfig'
 import TestPage from './pages/TestPage'
 import Books from './pages/Books'
 import Quotes from './pages/Quotes'
+import Places from './pages/Places'
 
 import { collection,
     doc,
@@ -115,6 +116,7 @@ return (    <div>
 <HashRouter>
 <nav className='mainNav'>
     <Link className="link"  to='/testpage'> Test Page</Link>
+    <Link className='link' to='/places'>Places</Link>
     <Link className="link" to='/books'> Books</Link>
     <Link className="link" to ='/quotes'>Quotes </Link>
     </nav>
@@ -124,6 +126,7 @@ return (    <div>
     <Route path="/testpage" element={<TestPage/>}  />
     <Route path="/books" element={<Books/>}  />
     <Route path='/quotes' element={<Quotes/>} />
+    <Route path='/places' element={<Places />} />
    
    
     </Routes>

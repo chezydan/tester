@@ -6,7 +6,7 @@ import '../App03.css'
 import {useState, useEffect, useRef} from 'react';
 
 
-    FIREBASE
+   FIREBASE
 import {db} from '../firebaseConfig'
 import { collection,
     doc,
@@ -208,3 +208,18 @@ TABLE
 }
 
 export default Books
+
+
+
+---podcast data---
+
+arch data
+-(id)
+
+-name                  
+coors default
+year 
+img
+lat                 
+lon      
+

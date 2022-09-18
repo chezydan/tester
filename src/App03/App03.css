@@ -95,12 +95,17 @@ grid-template-columns: 1fr 1fr;  }
     color:wheat;
     border-radius:3%;
     align-items :center;
-    max-width:95%
+    max-width:95%;
+
     
 
 }
 .cart img{
     height:12em;
+    margin-right:auto;
+    margin-left:auto;
+    display:flex;
+    
 }
 .cart a {
     color:yellowgreen;
@@ -130,6 +135,12 @@ grid-template-columns: 1fr 1fr;  }
 
 .book-title{
     background-color: rgb(112, 60, 8);
+    text-align:center ;
+    padding:0.5em;
+}
+
+.itm-title{
+    background-color: rgb(70, 20, 10);
     text-align:center ;
     padding:0.5em;
 }

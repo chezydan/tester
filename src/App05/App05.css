@@ -1,0 +1,90 @@
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body{
+
+    background-color:RGB(0,50,0);
+color:white;
+margin:0;
+padding:1em;
+}
+
+
+.formy{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+color:gray;
+}
+
+.formy-btn{
+    width:100px;
+}
+
+
+.formy textarea:focus{
+    background-color: yellow;
+}
+
+    
+
+.cart-container{
+display:flex;  
+;
+flex-wrap: wrap;  /*DONT FORGET */
+gap:1em;
+}
+
+
+.cart{
+    background-color:rgba(110,50,20,1);
+    width:30vw;
+    white-space: pre-line;   
+    color: aliceblue;
+    border-radius:8%;
+    justify-items: center;
+
+  
+
+}
+@media ( max-width:600px){
+    .cart{
+        min-width:90%;  
+    color:orange;}
+}
+
+
+.cart-title{
+    color:#FFD700;
+    text-shadow: 0.25px 1px;
+    
+}
+
+.cart-table:{
+
+    border:solid 1px black;    
+}
+
+.cart-table td{
+ 
+    border:solid black 0.5px;
+
+}
+.prog-lang{
+    color:silver;
+}
+.monospace{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.lnk{
+    text-decoration:none;
+    color :wheat;
+}

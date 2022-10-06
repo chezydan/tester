@@ -1,0 +1,166 @@
+body{
+    background-color: darkslateblue;
+color:white;
+margin:0;
+padding:0;
+}
+
+.general{
+    display:flex;
+    flex-direction: column;
+}
+
+.routes
+{display:flex;
+padding-top:10px;}
+
+
+.navbar{display:flex;
+position:static;}
+
+.nav-container{
+    
+position:static;
+    width: 100%;
+    height: 80px;
+    background-color:black;
+    display:flex;
+    flex-direction:column;    
+}
+
+
+.left-container{
+    flex: 70%;
+    display: flex;
+    align-items: center;
+   
+   padding-left: 5%;
+   background-color: black;
+
+   justify-content:left;
+  
+}
+
+.right-container{
+    flex: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+
+    align-items:center;
+}
+
+.right-container input{
+    width:150px;
+    border:none;
+}
+
+.right-container button{
+    width:50px;
+    height:32px;
+    border:none;
+}
+
+.inner-container{
+    width: 100%;
+  height: 80px;
+  display: flex;
+}
+
+.extended-container{
+   background-color: black; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 700px){
+    .extended-container{display:none;}
+}
+
+.link-extended-container{
+    color: white;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.link-container{
+    display:flex;
+   
+}
+
+.linky{
+    color: white;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin: 10px;
+}
+  @media (max-width: 700px) {
+ .linky{   display: none;}
+  
+
+}
+
+
+
+.open-link-button{
+    width: 70px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+ @media screen and (min-width: 700px) {
+      .open-link-button{ display: none;} }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.containera{
+    width:100vw;
+    height:100vh;
+    background-color: black;
+}
+.ball{
+    background-color: silver;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    animation: moveball 10s infinite;
+}
+
+@keyframes moveball {
+    0%{
+        transform: translate(0,0);
+        background: grey;
+    }
+
+    50%{
+        transform: translate(400px,200px);
+        background:aqua;
+    }
+
+    100%{
+        transform: translate(100px,600px);
+        background: lightcoral;
+    }
+    
+}

@@ -1,19 +1,21 @@
 import React from 'react'
-import { FaTrash, FaEdit, FaSearchLocation} from 'react-icons/fa'
-import {BiPhotoAlbum} from 'react-icons/bi'
 import {useState, useEffect, useRef} from 'react'
+
+import Place from '../components/Place'
 import '../App03.css'
 
 import {db} from '../firebaseConfig'
 
 import { doc,collection,getDocs,updateDoc,addDoc,deleteDoc} 
 from 'firebase/firestore'
-import { jsonEval } from '@firebase/util'
-import { HashRouter } from 'react-router-dom'
 
 
 function Places() {
 //CONSTS STATES
+const[wPieces, setWPieces]  =useState();
+const [page, setPage] =useState(1)
+    const multi=5
+
 const[currentId, setCurrentId] =useState('')
 const[pieces,setPieces] = useState([])
 const piecesCollectionRef= collection(db, 'pieces')
@@ -40,6 +42,11 @@ const [newLat,setNewLat]=useState('')
 const [newLon,setNewLon]=useState('')
 //states, other
 const[edit, setEdit]=useState(false)
+
+
+//sercher
+const [sYearFrom, setSYearFrom] =useState(-20000)
+const [sYearTill, setSYearTill] =useState(20000)
 
 
 useEffect(()=>{
@@ -97,11 +104,21 @@ const updateItm=(id,name,place,img,lat,lon,year,desc)=>{
     inputLon.current.value=lon;
     
     setCurrentId(id)
+}
 
+function handleSearch(){
+   if (sYearFrom =" "){
+    setSYearFrom(-20000)
+   }
+    if(sYearFrom=="")
+    {
+        console.log(sYearFrom)}
+
+    
 }
 
   return (<>
-    <div>Places</div>
+  
     <   div className='formy'>
     <input
         placeholder='name'
@@ -131,60 +148,57 @@ const updateItm=(id,name,place,img,lat,lon,year,desc)=>{
         placeholder='lon'
         ref={inputLon}
         onChange={ (e)=> {setNewLon(e.target.value)}}></input>
+<button   onClick={createItm}>
+    { edit? 'edit item': 'create item'}   </button>   
+    </div> <br></br>
+   
+    <div>
+        <input type="text" 
+        placeholder='from'
+        onChange={ (e)=>{setSYearFrom(e.target.value  )
+            if(e.target.value==""){ setSYearFrom(-20000)}        
+        }} ></input>
+        <button className='btn' name='year from' 
+        onClick={handleSearch}></button>
 
-<button 
-onClick={createItm}>
-    { edit? 'edit item': 'create item'}
-</button>
+        <input type="text" 
+        placeholder='till'
+        onChange={ (e)=>{setSYearTill(e.target.value  )
+            if(e.target.value==""){ setSYearTill(20000)}        
+        }} ></input>
+
 
     </div>
-  <section>
+    <br></br>
+
+    <section>
     <div className='cart-container'>
-        {pieces.map(  ({id,name,place,img,lat,lon,year,desc}) =>{
+        {pieces.filter( (piece)=> piece.year >parseInt(sYearFrom)   )
+        .filter(piece => piece.year < parseInt(sYearTill))
+        .map(  (piece )   =>{
             return (<>
         <div className='cart'>
-                <h3 className='itm-title'>{name}</h3>
-                <p>{place}</p>
-                <p>{year}</p>
-                <img src={img} alt='pict'/>
-                <div  >
-                    <a href={`https://www.google.ca/maps/@${lat},${lon},250m/data=!3m1!1e3`} 
-                     target="blank" >map it</a> 
-                        </div>
-<br></br>
-<hr></hr>
-                <button 
-                onClick={ ()=>{updateItm(id,name,place,img,lat,lon,year )}}
-                >{<FaEdit />}</button>
-                <button 
-                onClick=    {()=>{
-                    if (window.confirm('sure on deleting?') ) 
-                    deleteItm(id)}  }  > {<FaTrash />}  </button>
-             <a href={`https://www.google.ca/maps/@${lat},${lon},250m/data=!3m1!1e3`} 
-                     target="blank" >   <button >
-                {<    FaSearchLocation />}
-                </button>  </a>
-                <a href={`https://www.google.com/search?q=${name}+images&client=ubuntu&hs=doN&channel=fs&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjC9IDJ_Z76AhWCuaQKHURyCtgQ_AUoAXoECAEQAw&biw=1209&bih=801&dpr=1`} 
-                     target="blank" >   <button >
-                {<BiPhotoAlbum/>}
-                </button>  </a>
-                <a href={`https://en.wikipedia.org/wiki/${name}`} 
-                     target="blank" >   <button >
-                {'W'}
-                </button>  </a>
-
-
-                
-
-                
-                </div>
+{  <>
+     {/* piece.year> parseInt(sYearFrom) && piece.year < parseInt(sYearTill) &&  */}
+{    <Place piece={piece} updateItm={updateItm} deleteItm={deleteItm}  /> }
+</>                  }
+    
+</div>
             </>)
-        } ) }
+        } )    
+            
+         }
     </div>
 
   </section>
+
   <p>  
+    {/*
   {JSON.stringify(pieces)}
+  <br></br>
+  <br></br>
+  {pieces.map((itm)=> {return JSON.stringify(itm)})}    
+    */}
   </p>
     </>
   )

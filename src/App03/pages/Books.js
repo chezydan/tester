@@ -108,7 +108,8 @@ function Books() {
     <h2  >      App03 firebase crud on books - books element </h2></div>
     <div className='formy'>
     
-    <input  
+    <input 
+    type='text' 
         placeholder='title'
         ref={inputTitle}
         onChange={(e)=>{setTitle(e.target.value)}}
@@ -168,7 +169,6 @@ function Books() {
             onClick={ ()=> updateBook(book.id, book)}>
                     edit</button>
 
-         
 
 </section>
     )  
@@ -178,6 +178,24 @@ function Books() {
     )}
 
 </div>  {/*cart container */}
+
+         
+<div>
+    {books.map( (itm)=>{
+        return(<div>
+        <p>
+         {   JSON.stringify(itm)     }
+           </p>
+           <p>
+           &#123;  id:"{itm.id}",title:"{itm.title}",author:"{itm.author}",desc:"{itm.desc}",
+           temas:"{itm.temas}",lang:"{itm.lang}"
+
+           &#125;
+            
+           </p>
+        </div>)
+    })}
+</div>
     </>
   )
 }

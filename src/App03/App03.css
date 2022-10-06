@@ -1,8 +1,8 @@
 body{
     background-color: rosybrown;
+padding-top:20px;
 
 }
-
 
 .link{
     color:blue;
@@ -11,13 +11,12 @@ body{
     text-decoration: none;
     font-weight:bold ;}
 
-
 .link:hover{
     color:white;
     padding-right:1.5rem;
 }
 .st{
-    top: 18px;
+  /*  top: 18px; */
     position:sticky;
     color:yellow
     
@@ -45,7 +44,9 @@ body{
     border: solid 3px brown;
     padding :1em;
     border-radius: 3%;
-    background-color: darkmagenta;
+    background-color:rgba(139,0,139,0.6);
+    
+    backdrop-filter: blur(5px);
     opacity: 82%;
  
     
@@ -84,8 +85,11 @@ grid-template-columns: 1fr 1fr;  }
 }
 .cart-container{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(520px , 1fr) );    
-    grid-gap:2em;
+    grid-template-columns: repeat(auto-fit, minmax(500px , 1fr) );    
+
+    justify-content: center;
+    align-items: center;
+
     
  
 
@@ -95,8 +99,11 @@ grid-template-columns: 1fr 1fr;  }
     color:wheat;
     border-radius:3%;
     align-items :center;
-    max-width:95%;
-
+    margin-top:1.5em;
+   width:95%;
+    margin-right:auto;
+    margin-left:auto;
+ 
     
 
 }
@@ -134,18 +141,23 @@ grid-template-columns: 1fr 1fr;  }
 
 
 .book-title{
-    background-color: rgb(112, 60, 8);
+    background-color: rgb(50, 4, 25);
     text-align:center ;
     padding:0.5em;
 }
 
 .itm-title{
-    background-color: rgb(70, 20, 10);
+    background-color: rgba(170, 160, 150,0.4);
+    backdrop-filter:blur(5px);
     text-align:center ;
     padding:0.5em;
 }
 
-
+.btn{
+width:2em;
+height:2em;
+border-radius: 1%;
+}
 
 
  

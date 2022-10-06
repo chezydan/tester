@@ -30,7 +30,7 @@ export default function TestPage() {
         <h2>const UPDATE</h2>
         <h2>r e t u r n ()</h2>
         <h3>FORM</h3>
-        <h4>Inputs</h4>
+        <h4>Inputs  - each one 'ref:inputNAME</h4>
         <h4>Button</h4>
 
         <h3>MAPPING TABLE</h3>

@@ -18,7 +18,7 @@ const         [extendNavbar, setExtendNavbar]   =useState(false)
                 <Link to="/product" className='linky'>Product  </Link>               
                 <Link to="/contact" className='linky'>Contact  </Link>               
                 <Link to="/about" className='linky'>About  </Link>  
-
+                <Link to="/ball" className='linky'> play </Link>
 </div>
 <div className='open-link-button'
 onClick={()=>{ setExtendNavbar((cur)=>!cur)   } }>

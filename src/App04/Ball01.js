@@ -5,10 +5,10 @@ function Ball01() {
   return (
     <div>
 
-<Link to="/" >Home  </Link>
+<Link to="/" >Home  </Link> 
             <div className='containera'>
     <div className='ball'></div>
-
+<h1> Ball</h1>
 </div>
     </div>
   )

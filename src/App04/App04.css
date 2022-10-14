@@ -1,5 +1,9 @@
+:root{
+    --bg-color: #001144;
+}
+
 body{
-    background-color: darkslateblue;
+    background-color: var(--bg-color);
 color:white;
 margin:0;
 padding:0;

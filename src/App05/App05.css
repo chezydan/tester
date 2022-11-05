@@ -17,15 +17,21 @@ padding:1em;
 
 
 .formy{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    display:flex;
+    flex-wrap: wrap;
+    width:100wv;
 color:gray;
+background-color: gray;
 }
 
 .formy-btn{
     width:100px;
 }
 
+
+.formy textarea{
+    flex:40%;
+}
 
 .formy textarea:focus{
     background-color: yellow;

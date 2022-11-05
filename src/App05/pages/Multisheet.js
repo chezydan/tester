@@ -103,7 +103,7 @@ const Display = (itm)=>{
     ref={inputExcel} 
     onChange={(e)=>{setNewExcel(e.target.value) }}></textarea>
     <textarea 
-    placeholder='javascript'
+    placeholder='js'
     ref={inputJavascript}
     onChange={(e)=>{setNewJavascript(e.target.value) }}></textarea>
     

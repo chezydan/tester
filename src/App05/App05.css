@@ -19,7 +19,7 @@ padding:1em;
 .formy{
     display:flex;
     flex-wrap: wrap;
-    width:100wv;
+
 color:gray;
 background-color: gray;
 }
@@ -41,7 +41,7 @@ background-color: gray;
 
 .cart-container{
 display:flex;  
-;
+
 flex-wrap: wrap;  /*DONT FORGET */
 gap:1em;
 }
@@ -71,7 +71,7 @@ gap:1em;
     
 }
 
-.cart-table:{
+.cart-table{
 
     border:solid 1px black;    
 }

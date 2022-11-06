@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "gh-pages": "^4.0.0"
   }
 }

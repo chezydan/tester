@@ -10,6 +10,7 @@ import About from './components/About'
 
 import Navbar from './components/Navbar'
 import Ball01 from './Ball01'
+import Parent from './components/Parent'
 
 
 function App04() {
@@ -21,11 +22,13 @@ const [name,setName] =useState('myName');
 
   return (<>
 
+
 <div className='general'>
- 
+<Parent >           
         <Router >
         <Navbar className="navbar" />
-           
+
+
             <Routes  className="routes">
             <Route path='/' element={<Home />} />
             <Route path="/product" element={<Product />}/>
@@ -38,7 +41,7 @@ const [name,setName] =useState('myName');
         </Router>
 
 
-
+       </Parent>
 
 
 
